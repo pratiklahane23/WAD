@@ -1,0 +1,55 @@
+#Create a Node.JS Application which serves a static website.
+
+1) mkdir your-project-name
+
+2)cd your-project-name
+
+3)npm init -y
+
+4)npm install express –save
+
+Package.json
+{
+  "name": "express-static-file-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"   // change start value as node index.js
+  },                                           // This will allow you to use the npm start command in your terminal to launch 
+  "keywords": [],                         your express server
+  "author": "Paul Halliday",
+  "license": "MIT"
+}
+
+
+5)Index.js
+
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.use(express.static('public'));  // represents application is serving static webpage in public directory
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
+
+
+
+6)Index.html
+
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <img src="shark.png" alt="shark"> //download & store image in public directory
+  </body>
+</html>
+
+7) npm start
+

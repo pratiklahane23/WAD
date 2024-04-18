@@ -1,0 +1,64 @@
+1) install node.js https://nodejs.org/
+
+2) Install Angular CLI
+npm install -g @angular/cli@latest
+
+3) To create new project
+through CLI go to folder of the new project
+Give command as -
+
+ng new project-name
+
+4)Open folder src/app 
+Modify app.module.ts for form application
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import {FormsModule} from '@angular/forms'
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule, 
+    FormsModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+5) Open app.component.html 
+Write html code for form (representative code is mentioned here, modify for multiple inputs)
+<h1>Simple Form</h1>
+<form #simpleForm = "ngForm" (ngSubmit) = "getValues(simpleForm.value)">
+  <input type ="text" ngModel name = "user" placeholder = "Enter Name">
+  <br> <br>
+  <input type ="text" ngModel name = "age" placeholder = "Enter age">
+  <br> <br>
+  <input type ="text" ngModel name = "city" placeholder = "Enter city">
+  <br> <br>
+  <button>Get user value</button>
+</form>
+
+6) Make changes in app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'AngProj1';
+  getValues(val:any)
+  {
+    console.log(val);
+  }
+}
+
+

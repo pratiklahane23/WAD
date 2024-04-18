@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multipage template - jQuery Mobile: Design and Develop</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+    </script>
+    <script type="text/javascript" src="assets/js/ui.js">
+    </script>
+</head>
+
+<body class="container">
+    <div data-role="page" id="page-one" data-title="Page 1">
+        <div data-role="header">
+            <h1>Page 1</h1>
+        </div>
+        <div data-role="content">
+
+        </div>
+        
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Sign in">
+            
+        </form>
+        <center>
+            <p><a href="#page-three">ForgotPassword</a></p>
+            <h4>You Don't have Account register first</h4>
+           <p><a href="#page-two">Register</a></p>
+            
+            
+        </center>
+    </div>
+    <div data-role="page" id="page-two" data-title="Page 2">
+        <div data-role="header">
+            <h1>Page 2</h1>
+        </div>
+        <div data-role="content">
+
+            <a href="#page-one">Back Home page</a>
+        </div>
+
+        <div class="content">
+            <div>
+                <center>
+                    <h2>Register</h2>
+                </center>
+
+            </div>
+            <div data-role="content">
+                <label>Full Name:</label>
+                <input type="text"><br>
+
+                <label>Address:</label>
+                <textarea cols="25" row="7"> </textarea><br>
+
+                <label>Pincode:</label>
+                <input type="text"><br>
+
+                <label>Date Of Birth:</label>
+                <input type="date"><br>
+
+                <label>Email:</label>
+                <input type="email"><br>
+
+                <label>Password:</label>
+                <input type="password"><br>
+
+                <label>Comfirm Password:</label>
+                <input type="password"><br>
+
+                <input type="submit" value="Register">
+            </div>
+         
+        </div>
+      
+    </div>
+
+
+</body>
+
+</html>
